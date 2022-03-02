@@ -1,0 +1,10 @@
+---
+- name: Task -3 Check for Python
+  raw: test -e /usr/bin/python
+  changed_when: false
+  failed_when: false
+  register: check_python
+- name: Task -4 Install Python
+  become: yes
+  raw: apt-get -y install python
+  when: check_python.rc != 0

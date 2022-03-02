@@ -1,0 +1,4 @@
+- name: copy from source 
+      copy:
+        src: /etc/ansible/roles/files/index.html
+        dest: /home/ubuntu

@@ -1,0 +1,7 @@
+---
+# handlers file for /etc/ansible/roles/jenkins
+- name: task -8 Start & Enable Jenkins
+  systemd:
+    name: jenkins
+    state: started
+    enabled: true

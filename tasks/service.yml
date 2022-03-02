@@ -1,0 +1,5 @@
+- name: task -8 Start & Enable Jenkins
+  systemd:
+    name: jenkins
+    state: started
+    enabled: true

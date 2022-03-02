@@ -1,0 +1,6 @@
+---
+# tasks file for /etc/ansible/roles/jenkins
+- import_tasks: java.yml
+- import_tasks: python.yml
+- import_tasks: jenkins.yml
+- import_tasks: service.yml

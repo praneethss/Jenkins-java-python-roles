@@ -1,0 +1,9 @@
+---
+- name: Task -5 get jenkins files
+  shell: wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+
+- name: Task -6 setting up Jenkins
+  shell: sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+- name: Task -7 Install Jenkins
+  shell: sudo apt-get install -y jenkins
